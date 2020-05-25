@@ -1,0 +1,137 @@
+/* Body element */
+body {
+  background-color: hsl(206, 47%, 93%);
+  font-family: "Karla";
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Child element */
+.child h2 {
+  color: hsl(179, 62%, 43%);
+}
+
+.child h3 {
+  color: hsl(71, 73%, 54%);
+}
+
+.child p {
+  color: hsl(218, 22%, 67%);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  color: hsl(204, 43%, 93%);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* Grid element */
+.parent {
+  width: 45%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: 100px auto;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.parent>div {}
+
+.child {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: #fff;
+  padding: 3rem;
+}
+
+/* Lower left box */
+.first-twin {
+  background-color: hsl(179, 62%, 43%);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 2rem 3rem;
+  color: hsl(204, 43%, 93%);
+}
+
+.first-twin span {
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 1.5rem;
+  color: hsl(179, 47%, 70%);
+}
+
+.first-twin p {
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+/* Lower Right box */
+.second-twin {
+  background-color: hsl(179, 47%, 52%);
+  grid-column-start: 3;
+  grid-column-end: 5;
+  padding: 2rem 3rem;
+  color: hsl(204, 43%, 93%);
+}
+
+.second-twin h3 {
+  padding-bottom: 20px;
+}
+
+/* Button */
+.button {
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button:hover {
+  background-color: white;
+  color: #000;
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 768px) {
+  .parent {
+    width: 100%;
+    grid-template-columns: auto;
+    margin: auto;
+  }
+
+  .child {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .first-twin {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .second-twin {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
